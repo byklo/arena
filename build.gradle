@@ -1,0 +1,8 @@
+apply plugin: 'java'
+
+task(runArena, dependsOn: 'classes', type: JavaExec) {
+	main = 'Game'
+	classpath = sourceSets.main.runtimeClasspath
+}
+
+defaultTasks 'runArena'
